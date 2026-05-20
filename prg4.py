@@ -26,16 +26,11 @@ def relu_derivative(x):
 
 # Training function
 def train_network(activation, activation_derivative, learning_rate):
-
     np.random.seed(1)
-
     # Initialize weights
     weights = np.random.rand(2,1)
-
     print("\nTraining with learning rate:", learning_rate)
-
     for epoch in range(1000):
-
         # Forward pass
         z = np.dot(X, weights)
         output = activation(z)
@@ -48,10 +43,8 @@ def train_network(activation, activation_derivative, learning_rate):
 
         # Update weights
         weights += learning_rate * np.dot(X.T, d_output)
-
     print("Final output:")
     print(output)
-
 
 # -------- Run Experiments --------
 

@@ -17,10 +17,8 @@ rotation_matrix = cv2.getRotationMatrix2D(center, angle, 1)
 rotated = cv2.warpAffine(img, rotation_matrix, (cols, rows))
 
 # -------- Translation --------
-tx, ty = 50, 30
-translation_matrix = np.float32([[1, 0, tx],
-                                 [0, 1, ty]])
-
+tx, ty = 60, 70
+translation_matrix = np.float32([[1, 0, tx], [0, 1, ty]])
 translated = cv2.warpAffine(img, translation_matrix, (cols, rows))
 
 # -------- Rotation + Translation --------
